@@ -1,0 +1,27 @@
+<Window x:Class="WPF_ListView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_ListView"
+        mc:Ignorable="d"
+        Title="ListView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="txtEntry" Height="35" FontSize="16" Margin="10 0 10 0"/>
+        <Button Name="btnAdd" Height="35" Width="50" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Click="btnAdd_Click" ></Button>
+        <Button Name="btnDel" Height="35" Width="50" Content="Delete" Grid.Column="1" HorizontalAlignment="Left" Click="btnDel_Click" Margin="70 0 0 0"></Button>
+        <Button Name="btnClr" Height="35" Width="50" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Click="btnClr_Click" Margin="140 0 0 0" ></Button>
+        <ListView Grid.Row="1" Grid.ColumnSpan="2" Name="LvEntries" SelectionMode="Multiple"/>
+        
+    </Grid>
+</Window>
